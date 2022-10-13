@@ -1,0 +1,17 @@
+.pokeList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pokeList {
+    list-style: none;
+}
+
+.pokelist li a {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
