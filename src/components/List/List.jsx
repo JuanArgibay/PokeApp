@@ -1,23 +1,30 @@
 import { usePokemons } from '../../hooks/usePokemons'
 import { Link } from 'react-router-dom'
+import { Imagen } from '../Imagen/Imagen'
+import './style.css'
 
 export const ListPokemon = () => {
 
-    const { pokemons } = usePokemons();
+    const { pokemones, loading } = usePokemons();
 
     return (
-        <section>
-            {pokemons?.length ? (
-                <ul>
-                    {pokemons.map((pokemon, index) =>
-                        <li key={index}>
-                            <Link to={`/pokemon/${index + 1}`}>
-                                {pokemon.name}
-                            </Link>
-                        </li>
-                    )}
-                </ul>
-            ) : null}
-        </section>
+        <>
+            <section>
+                {pokemones?.length ? (
+                    <ul className='pokeList'>
+                        {pokemones.map(pokemon =>
+                            loading ? (<p>cargando</p>) : (
+                                <li key={pokemon.id}>
+                                    <Link to={`/pokemon/${pokemon.id}`}>
+                                        <Imagen url={pokemon.sprites.front_default}></Imagen>
+                                        <h4>{pokemon.name}</h4>
+                                    </Link>
+                                </li>)
+                        )}
+                    </ul>
+                ) : null}
+            </section>
+
+        </>
     )
 };

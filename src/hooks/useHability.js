@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import { getPokemon } from '../services'
 
-export const usePokemon = (id) => {
-    const [pokemon, setPokemon] = useState();
+export const useHability = (url) => {
+    const [hability, setHability] = useState();
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const getData = async () => {
             try {
                 setLoading(true);
-                const data = await getPokemon(id);
-                setPokemon(data);
+                const data = await getPokemon(url);
+                setHability(data);
             } catch (error) {
                 console.log(error);
             } finally {
@@ -18,8 +18,8 @@ export const usePokemon = (id) => {
             }
         };
         getData();
-    }, [id])
-
-
-    return { pokemon, setPokemon, loading, setLoading };
+    }, [url])
+    
+    return { hability, loading}
 }
+
