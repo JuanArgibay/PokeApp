@@ -5,14 +5,14 @@ import './style.css'
 
 export const ListPokemon = () => {
 
-    const { pokemones, loading } = usePokemons();
+    const { pokemonsSelect, loading, limit, setLimit, limitDownload } = usePokemons();
 
     return (
         <>
             <section>
-                {pokemones?.length ? (
+                {pokemonsSelect?.length ? (
                     <ul className='pokeList'>
-                        {pokemones.map(pokemon =>
+                        {pokemonsSelect.map(pokemon =>
                             loading ? (<p>cargando</p>) : (
                                 <li key={pokemon.id}>
                                     <Link to={`/pokemon/${pokemon.id}`}>
@@ -24,7 +24,7 @@ export const ListPokemon = () => {
                     </ul>
                 ) : null}
             </section>
-
+            <button onClick={() => setLimit(limit + limitDownload)}>Ver mas</button>
         </>
     )
 };

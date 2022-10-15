@@ -1,13 +1,12 @@
 import { useHability } from '../../hooks/useHability'
 
-export const HabilityData = (url) => {
-    console.log(url);
+export const HabilityData = () => {
 
-    const { hability } = useHability(url);
+    const { hability } = useHability();
 
     return (
         <section>
-            <p>{hability.name}</p>
+            <p>{hability?.name}</p>
         </section>
     )
 }
