@@ -20,11 +20,20 @@ export const getPokemon = async (id) => {
     }
 }
 
-export const getPokemonUrl = async (url) => {
+ export const getPokemonUrl = async (url) => {
     try {
         const {data} = await axios.get (url.url)
         return data;
     } catch (error) {
         return error;
     }
-}
+} 
+
+export const getPokemonUrlHab = async (urlHability) => {
+    try {
+        const {data} = await axios.get (`${urlHability}`)
+        return data;
+    } catch (error) {
+        return error;
+    }
+} 

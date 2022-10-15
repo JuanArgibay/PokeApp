@@ -1,25 +1,29 @@
 import { useEffect, useState } from 'react';
-import { getPokemon } from '../services'
+import { getPokemonUrlHab } from '../services'
 
-export const useHability = (url) => {
+
+export const useHability = () => {
     const [hability, setHability] = useState();
     const [loading, setLoading] = useState(false);
-
+    const [urlHability, setUrlHability] = useState('');
+    
     useEffect(() => {
         const getData = async () => {
-            try {
-                setLoading(true);
-                const data = await getPokemon(url);
-                setHability(data);
-            } catch (error) {
-                console.log(error);
-            } finally {
-                setLoading(false);
-            }
+                try {
+                    setLoading(true);
+                    if (urlHability) {
+                        const data = await getPokemonUrlHab(urlHability);
+                        setHability(data);
+                    }        
+                } catch (error) {
+                    console.log(error);
+                } finally {
+                    setLoading(false);
+                }  
         };
         getData();
-    }, [url])
+    }, [urlHability])
     
-    return { hability, loading}
+    return { hability, setUrlHability, loading}
 }
 

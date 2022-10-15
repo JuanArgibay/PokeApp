@@ -3,11 +3,12 @@ import { getPokemons, getPokemonUrl } from '../services'
 
 export const usePokemons = () => {
 
+    const limitDownload = 100;
     const [pokemons, setPokemons] = useState();
     const [loading, setLoading ] = useState();
-    const [limit, setLimit] = useState(100);
+    const [limit, setLimit] = useState(limitDownload);
     const pokemonsAllData = [];
-    const [ pokemones, setPokemones] = useState([]);
+    const [ pokemonsSelect, setPokemonsSelect] = useState([]);
 
     useEffect(() => {
         const getData = async () => {
@@ -28,11 +29,11 @@ export const usePokemons = () => {
         const updateData = async () => {
             try {
                 for (let clave in pokemons){
-                    const url = (pokemons[clave])
-                    const dataFull = await getPokemonUrl(url)
+                    const {url} = (pokemons[clave])
+                    const dataFull = await getPokemonUrl({url})
                     pokemonsAllData.push(dataFull);
                 }
-                setPokemones(pokemonsAllData);
+                setPokemonsSelect(pokemonsAllData);
             } catch (error) {
                 console.log(error);
             }
@@ -40,5 +41,5 @@ export const usePokemons = () => {
         updateData();
     }, [pokemons])
 
-    return { pokemons, setPokemons, loading, setLoading, limit, setLimit, pokemonsAllData, pokemones };
+    return { pokemons, setPokemons, loading, setLoading, limit, setLimit, pokemonsAllData, pokemonsSelect };
 }
