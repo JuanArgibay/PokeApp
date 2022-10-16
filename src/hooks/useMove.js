@@ -2,18 +2,20 @@ import { useEffect, useState } from 'react';
 import { getPokemonUrlHab } from '../services'
 
 
-export const useHability = () => {
-    const [hability, setHability] = useState();
+export const useMove = () => {
+    const [move, setMove] = useState();
     const [loading, setLoading] = useState(false);
-    const [urlHability, setUrlHability] = useState('');
+    const [urlMove, setUrlMove] = useState('');
     
     useEffect(() => {
         const getData = async () => {
+            console.log('entramos', urlMove);
                 try {
                     setLoading(true);
-                    if (urlHability) {
-                        const data = await getPokemonUrlHab(urlHability);
-                        setHability(data);
+                    if (urlMove) {
+                        const data = await getPokemonUrlHab(urlMove);
+                        console.log(data);
+                        setMove(data);
                     }        
                 } catch (error) {
                     console.log(error);
@@ -22,8 +24,8 @@ export const useHability = () => {
                 }  
         };
         getData();
-    }, [urlHability])
+    }, [urlMove])
     
-    return { hability, setUrlHability, loading}
+    return { move, setUrlMove, loading}
 }
 

@@ -12,7 +12,7 @@ export const Main = () => {
                 <Route path='/' element={<ListPokemon />} />
                 <Route path='/pokemon/:id' element={<PokeCard />} />
                 <Route path='/pokemon/:id/habilities' element={<Habilities />} />
-                <Route path='/pokemon/habilities/data' element={<HabilityData />} />
+                <Route path='/moves/:idmove' element={<HabilityData />} />
             </Routes>
         </main>
     )
