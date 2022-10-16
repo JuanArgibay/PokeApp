@@ -7,6 +7,9 @@ export const ListPokemon = () => {
 
     const { pokemonsSelect, loading, limit, setLimit, limitDownload } = usePokemons();
 
+    console.log(limit);
+    console.log(limitDownload);
+
     return (
         <>
             <section>
@@ -19,12 +22,16 @@ export const ListPokemon = () => {
                                         <Imagen url={pokemon.sprites.front_default}></Imagen>
                                         <h4>{pokemon.name}</h4>
                                     </Link>
-                                </li>)
+                                </li>
+                            )
                         )}
                     </ul>
-                ) : null}
+                ) : null
+                }
             </section>
-            <button onClick={() => setLimit(limit + limitDownload)}>Ver mas</button>
+            <button onClick={() => {
+                setLimit(limit + limitDownload)
+            }}>Ver mas</button>
         </>
     )
 };

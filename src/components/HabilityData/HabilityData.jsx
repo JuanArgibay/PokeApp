@@ -1,12 +1,12 @@
-import { useHability } from '../../hooks/useHability'
+import { useMove } from '../../hooks/useMove'
 
 export const HabilityData = () => {
 
-    const { hability } = useHability();
+    const { move } = useMove();
 
     return (
         <section>
-            <p>{hability?.name}</p>
+            <p>{move?.name}</p>
         </section>
     )
 }

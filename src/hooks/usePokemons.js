@@ -34,6 +34,7 @@ export const usePokemons = () => {
                     pokemonsAllData.push(dataFull);
                 }
                 setPokemonsSelect(pokemonsAllData);
+                
             } catch (error) {
                 console.log(error);
             }
@@ -41,5 +42,5 @@ export const usePokemons = () => {
         updateData();
     }, [pokemons])
 
-    return { pokemons, setPokemons, loading, setLoading, limit, setLimit, pokemonsAllData, pokemonsSelect };
+    return { pokemons, setPokemons, loading, setLoading, limit, setLimit, pokemonsAllData, pokemonsSelect, limitDownload };
 }
