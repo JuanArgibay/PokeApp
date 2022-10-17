@@ -5,10 +5,8 @@ import './style.css'
 
 export const ListPokemon = () => {
 
-    const { pokemonsSelect, loading, limit, setLimit, limitDownload } = usePokemons();
+    const { pokemonsSelect, limit, setLimit, limitDownload } = usePokemons();
 
-    console.log(limit);
-    console.log(limitDownload);
 
     return (
         <>
@@ -16,14 +14,12 @@ export const ListPokemon = () => {
                 {pokemonsSelect?.length ? (
                     <ul className='pokeList'>
                         {pokemonsSelect.map(pokemon =>
-                            loading ? (<p>cargando</p>) : (
-                                <li key={pokemon.id}>
-                                    <Link to={`/pokemon/${pokemon.id}`}>
-                                        <Imagen url={pokemon.sprites.front_default}></Imagen>
-                                        <h4>{pokemon.name}</h4>
-                                    </Link>
-                                </li>
-                            )
+                            <li key={pokemon.id}>
+                                <Link to={`/pokemon/${pokemon.id}`}>
+                                    <Imagen url={pokemon.sprites.front_default}></Imagen>
+                                    <h4>{pokemon.name}</h4>
+                                </Link>
+                            </li>
                         )}
                     </ul>
                 ) : null
