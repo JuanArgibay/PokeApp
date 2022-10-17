@@ -1,5 +1,3 @@
-
-
 import axios from "axios"
 
 export const getPokemons = async (limit) => {
@@ -29,11 +27,20 @@ export const getPokemon = async (id) => {
     }
 } 
 
-export const getPokemonUrlHab = async (urlHability) => {
+export const getPokemonIdMove = async (id) => {
     try {
-        const {data} = await axios.get (`${urlHability}`)
+        const {data} = await axios.get (`http://pokeapi.co/api/v2/move/${id}`)
         return data;
     } catch (error) {
         return error;
     }
-} 
+}
+
+export const getPokemonByName = async (keyword) => {
+    try {
+        const { data } = await axios.get(`http://pokeapi.co/api/v2/pokemon/${keyword}`)
+        return data;
+    } catch (error) {
+        return error;
+    }
+}
