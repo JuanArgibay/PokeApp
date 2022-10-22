@@ -1,17 +1,27 @@
-.pokeList {
+.pokelist {
     display: flex;
     flex-wrap: wrap;
 }
 
-.pokeList {
+.pokelist {
     list-style: none;
+}
+
+.pokelist li {
+    background-color: rgb(34, 102, 119);
+    margin: 0.6rem
 }
 
 .pokelist li a {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
 }
