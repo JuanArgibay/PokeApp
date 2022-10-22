@@ -1,3 +1,4 @@
+import './style.css'
 import { Imagen } from '../Imagen/Imagen'
 import { useParams, Link } from 'react-router-dom'
 import { usePokemon } from '../../hooks/usePokemon'
@@ -8,7 +9,7 @@ export const PokeCard = () => {
 
     return (
         pokemon ? (
-            <section>
+            <section className='poke-card-container'>
                 <h1>{pokemon.name}</h1>
                 <h2>Número {pokemon.order}</h2>
                 <Imagen url={pokemon.sprites.front_default} />

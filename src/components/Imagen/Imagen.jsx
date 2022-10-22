@@ -1,6 +1,9 @@
+import './style.css'
 
-export const Imagen = ({ url }) => {
+export const Imagen = ({ url, loading }) => {
     return (
-        <img src={url} alt='pokeImage'></img>
+        <>
+            {!loading ? (<img className='image-pokemon' src={url} alt='pokeImage'></img>) : null}
+        </>
     )
 }
