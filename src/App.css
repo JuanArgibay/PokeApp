@@ -30,3 +30,7 @@
 .pokemon-name {
   color: rgb(39, 39, 39);
 }
+
+a {
+  text-decoration: none;
+}

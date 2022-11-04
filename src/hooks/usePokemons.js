@@ -3,7 +3,7 @@ import { getPokemons, getPokemonUrl } from '../services'
 
 export const usePokemons = () => {
 
-    const limitDownload = 100;
+    const limitDownload = 150;
     const [pokemons, setPokemons] = useState();
     const [loading, setLoading ] = useState();
     const [limit, setLimit] = useState(limitDownload);
