@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-//import { Searcher } from "../components/Searcher/Searcher"
+import { HomeButton } from "../components/HomeButton/HomeButton"
 
 
 export const Header = () => {
@@ -8,13 +7,8 @@ export const Header = () => {
             <article >
                 <h1>Pokemon</h1>
                 <h2>Hazte con todos</h2>
-
             </article>
-            <aside className="home">
-                <Link to='/'>
-                    <button>HOME</button>
-                </Link>
-            </aside>
+            <HomeButton/>
         </section>
     )
 }

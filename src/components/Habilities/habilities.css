@@ -1,0 +1,14 @@
+.movesContainer {
+    margin: 2rem;
+}
+
+.movesContainer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem
+}
+
+.movesContainer li {
+    font-size: 1.5rem;
+}

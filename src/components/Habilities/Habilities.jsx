@@ -1,4 +1,4 @@
-import './style.css';
+import './habilities.css';
 import { usePokemon } from "../../hooks/usePokemon";
 import { useParams, Link } from 'react-router-dom';
 

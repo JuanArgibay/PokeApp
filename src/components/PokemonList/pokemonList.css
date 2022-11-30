@@ -1,0 +1,28 @@
+.pokelist {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokelist a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.pokelist li {
+    margin: 0.5rem;
+}
+
+.pokeListConainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.showMorePokemonsButton {
+    width: 100px;
+    margin: 0.5rem;
+    box-shadow: 15px 0 15px 0 rgba(0, 0, 0, 0)
+}

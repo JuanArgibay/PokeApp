@@ -1,4 +1,4 @@
-import './style.css'
+import './pokeCard.css'
 import { Imagen } from '../Imagen/Imagen'
 import { useParams, Link } from 'react-router-dom'
 import { usePokemon } from '../../hooks/usePokemon'
@@ -8,7 +8,6 @@ export const PokeCard = () => {
     const { pokemon } = usePokemon(id)
     const urlImage = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/";
 
-    console.log(pokemon);
     return (
         pokemon ? (
             <section className='poke-card-container'>
