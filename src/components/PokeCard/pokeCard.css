@@ -1,15 +1,21 @@
 .poke-card-container {
-    display: grid;
-    grid-template-columns: 1fr 200px 200px 1fr;
-    grid-template-rows: 50px 200px 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 3rem;
+    width: 300px;
+    height: 450px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 10%;
+    margin: 2rem;
 }
 
 .pokecardNameNumber {
-    grid-area: 1 / 2 / 2 / 4;
+    display: flex;
     justify-self: center;
-    align-self: center;
+    gap: 0.5rem;
+    align-items: flex-end;
+    font-family: 'Press Start 2P', cursive;
+    margin: 1.5rem;
 }
 
 .pokecardNameNumber h1,
@@ -19,15 +25,17 @@ h3 {
 }
 
 .pokecardImgType {
-    grid-area: 2 / 2 / 3 / 3;
     justify-self: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .poke-card-container article p {
     margin: 0;
+}
+
+.pokecardImgType p {
+    font-family: 'Inconsolata', monospace;
 }
 
 .poke-card-container article img {
@@ -36,17 +44,57 @@ h3 {
 }
 
 .poke-card-container a {
-    grid-area: 3 / 2 / 4 / 4;
     text-align: center;
 }
 
 .poke-card-container ul {
-    grid-area: 2 / 3 / 3 / 4;
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    font-family: 'Inconsolata', monospace;
+}
+
+.poke-card-container li {
+    gap: 0.5rem
 }
 
 .poke-card-container h3 {
     text-decoration: underline;
+}
+
+.progress-bar {
+    width: 110px;
+}
+
+.stats li {
+    display: grid;
+    grid-template-columns: 5rem 1fr 1.5rem;
+}
+
+.stats p {
+    text-align: right;
+}
+
+.stats {
+    margin: 1.5rem;
+}
+
+.progress-bar-hp {
+    accent-color: rgb(255, 8, 8);
+}
+
+.progress-bar-atk {
+    accent-color: rgb(230, 92, 0);
+}
+
+.progress-bar-def {
+    accent-color: rgb(161, 132, 1);
+}
+
+.progress-bar-sp {
+    accent-color: rgb(230, 0, 219);
+}
+
+.progress-bar-sp-def {
+    accent-color: rgb(11, 138, 0);
 }

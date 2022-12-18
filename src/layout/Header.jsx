@@ -1,13 +1,11 @@
+//import { HomeButton } from "../components/HomeButton/HomeButton"
 import { HomeButton } from "../components/HomeButton/HomeButton"
-
+import { Logo } from "../components/Logo/Logo"
 
 export const Header = () => {
     return (
         <section className="header">
-            <article >
-                <h1>Pokemon</h1>
-                <h2>Hazte con todos</h2>
-            </article>
+            <Logo/>
             <HomeButton/>
         </section>
     )
