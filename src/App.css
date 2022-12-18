@@ -17,26 +17,6 @@
   justify-content: space-between;
 }
 
-.header h1,
-.header h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin: 0.5rem;
-}
-
-.header h1 {
-  color: rgb(38, 0, 255);
-}
-
-.header h2 {
-  color: rgb(255, 0, 140);
-}
-
-
-.pokemon-name {
-  color: rgb(39, 39, 39);
-}
-
 a {
   text-decoration: none;
   color: inherit;
