@@ -2,12 +2,13 @@ import './pokeCard.css'
 import { Imagen } from '../Imagen/Imagen'
 import { useParams, Link } from 'react-router-dom'
 import { usePokemon } from '../../hooks/usePokemon'
+import { selectTypeIcon } from '../../helpers/selectIconsType'
 
 export const PokeCard = () => {
     const { id } = useParams();
     const { pokemon } = usePokemon(id)
     const urlImage = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/";
-
+    
     return (
         pokemon ? (
             <section className='poke-card-container'>
@@ -17,18 +18,21 @@ export const PokeCard = () => {
                 </article>
                 <article className='pokecardImgType'>
                     <Imagen url={urlImage + `/${pokemon.id}.gif`} />
-                    {pokemon.types.lenght > 1 ? (
-                        <p>{pokemon.types[0].type.name}</p>
-                    ) : (
                         <div>
                             {pokemon.types.map((pokemonType, index) =>
-                                <p key={index}>{pokemonType.type.name}</p>
+                                <img 
+                                    alt='iconType' 
+                                    className='iconTypePokemon'
+                                    src={selectTypeIcon(pokemonType.type.name)} 
+                                    key={index}
+                                    title={pokemonType.type.name}
+                                    >
+                                </img> 
                             )}
-                        </div>
-                    )}
+                        </div>    
                 </article>
                 <Link to={`/pokemon/${pokemon.id}/habilities`}>
-                    <h3>Habilidades</h3>
+                    <h3>Combat Moves</h3>
                 </Link>
                 <ul className='stats'>
                     <li>
