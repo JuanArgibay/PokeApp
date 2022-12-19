@@ -23,6 +23,6 @@ export const useMove = (idMove) => {
         getData();
     }, [idMove])
     
-    return { move, loading}
+    return { move, loading }
 }
 
