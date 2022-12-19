@@ -11,10 +11,15 @@ export const Habilities = () => {
         const id = url.split('/');
         return id[6];
     }
+    const pokemonReturn = `/pokemon/${pokemon?.id}`;
 
+    console.log(pokemon);
     return (
         pokemon ? (
             <section className="movesContainer">
+                <Link to={pokemonReturn}>
+                    volver
+                </Link>
                 <ul>
                     {pokemon.moves.map((move, index) =>
                         <Link key={index} to={`/moves/${idMove(move.move.url)}`}>
