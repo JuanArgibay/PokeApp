@@ -5,8 +5,8 @@ import { Main } from './layout/Main';
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      <Main></Main>
+        <Header></Header>
+        <Main></Main> 
     </div>
   );
 }
