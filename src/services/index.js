@@ -18,9 +18,9 @@ export const getPokemon = async (id) => {
     }
 }
 
- export const getPokemonUrl = async (url) => {
+ export const getPokemonUrl = async ({url}) => {
     try {
-        const {data} = await axios.get (url.url)
+        const {data} = await axios.get (url)
         return data;
     } catch (error) {
         return error;
@@ -30,6 +30,15 @@ export const getPokemon = async (id) => {
 export const getPokemonIdMove = async (id) => {
     try {
         const {data} = await axios.get (`http://pokeapi.co/api/v2/move/${id}`)
+        return data;
+    } catch (error) {
+        return error;
+    }
+}
+
+export const getPokemonUrlMove = async ({url}) => {
+    try {
+        const {data} = await axios.get (url)
         return data;
     } catch (error) {
         return error;
