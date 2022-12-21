@@ -20,7 +20,7 @@ export const Habilities = () => {
                     {moves.map((move, index) =>
                         <li key={index}>
                             <p>{move.name}</p>
-                            <p>{move.effect_entries[0].effect}</p>
+                            <p>{move.effect_entries[0]?.effect}</p>
                         </li>
                     )}
                 </ul>
