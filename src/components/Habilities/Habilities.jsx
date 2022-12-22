@@ -10,8 +10,7 @@ export const Habilities = () => {
     const { pokemon } = usePokemon(id);
     const { moves } = usePokemonMoves(pokemon);
     const pokemonReturn = `/pokemon/${pokemon?.id}`;
-
-    console.log(moves);
+    
     return (
         moves? (
             <section className="movesContainer">
