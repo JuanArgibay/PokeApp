@@ -16,9 +16,9 @@ export const PokemonList = () => {
                 <ul className='pokelist'>
                     {pokemonsSelect.map(pokemon =>
                         <li key={pokemon.id}>
-                            <Link to={`/pokemon/${pokemon.id}`}>
+                            <Link to={`/pokemon/${(pokemon.id)}`}>
                                 <Imagen url={pokemon.sprites.front_default}></Imagen>
-                                <h4 className='pokemon-name'>{pokemon.name}</h4>
+                                <h4 className='pokemon-name'>{pokemon.name.split("-").shift()}</h4>
                             </Link>
                         </li>
                     )}
