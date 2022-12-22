@@ -5,7 +5,6 @@ import pokeGif from '../../assets/pokeGif.gif'
 import './pokemonList.css'
 
 export const PokemonList = () => {
-
     const { pokemonsSelect, limit, setLimit, limitDownload, loading } = usePokemons();
 
     return (
