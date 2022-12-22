@@ -2,7 +2,7 @@ import './pokeCard.css'
 import { Imagen } from '../Imagen/Imagen'
 import { useParams, Link } from 'react-router-dom'
 import { usePokemon } from '../../hooks/usePokemon'
-import { selectTypeIcon } from '../../helpers/selectIconsType'
+import { ImageType } from '../ImageType/ImageType'
 
 export const PokeCard = () => {
     const { id } = useParams();
@@ -21,14 +21,11 @@ export const PokeCard = () => {
                         <Imagen url={urlImage + `/${pokemon.id}.gif`} />
                             <div>
                                 {pokemon.types.map((pokemonType, index) =>
-                                    <img 
-                                        alt='iconType' 
-                                        className='iconTypePokemon'
-                                        src={selectTypeIcon(pokemonType.type.name)} 
-                                        key={index}
-                                        title={pokemonType.type.name}
-                                        >
-                                    </img> 
+                                    <ImageType 
+                                        name={pokemonType.type.name} 
+                                        key={index} 
+                                        title={pokemonType.type.name}>
+                                    </ImageType>
                                 )}
                             </div>    
                     </article>

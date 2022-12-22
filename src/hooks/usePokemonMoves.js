@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPokemonUrlMove } from '../services';
+import { getPokemonUrl } from '../services';
 
 export const usePokemonMoves = (pokemon) => {
     const [moves, setMoves] = useState(pokemon);
@@ -12,7 +12,7 @@ export const usePokemonMoves = (pokemon) => {
                     const pokemonMoves = pokemon?.moves;
                     for (let clave in pokemonMoves){
                         const {url} = (pokemonMoves[clave].move);
-                        const dataFull = await getPokemonUrlMove({url})
+                        const dataFull = await getPokemonUrl({url})
                         MovesAllData.push(dataFull);
                     }
                     setMoves(MovesAllData);
