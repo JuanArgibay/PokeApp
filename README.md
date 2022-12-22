@@ -21,4 +21,7 @@ Esta App está desarrollada en React de forma dinámica.
 
 - Creacion de barra de búsqueda
 
-### Desplegada en: https://poke-app-navy-omega.vercel.app/
+### Desplegada en:
+
+https://poke-app-navy-omega.vercel.app/
+

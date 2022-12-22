@@ -33,11 +33,11 @@ export const PokemonList = () => {
                     className='pokeGif' 
                     alt='pokeGif' 
                     src={pokeGif}/>
-                <p>Ver mas</p>
+                <p>See more</p>
             </div>}
         </button>
         ) : (
-            <p>Cargando...</p>
+            <p>Loading...</p>
         )}
     </>
     )
