@@ -24,3 +24,4 @@ Esta App está desarrollada en React de forma dinámica.
 ### Desplegada en:
 
 https://poke-app-navy-omega.vercel.app/
+
