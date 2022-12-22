@@ -28,9 +28,8 @@
     color: #20366a
 }
 
-.pokeListConainer {
-    display: flex;
-    flex-direction: column;
+.pokeListContainer {
+    max-width: 700px;
 }
 
 .showMorePokemonsButton {

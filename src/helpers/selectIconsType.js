@@ -16,65 +16,54 @@ import poison from '../assets/typesIcons/poison.png'
 import rock from '../assets/typesIcons/rock.png'
 import steel from '../assets/typesIcons/steel.png'
 import water from '../assets/typesIcons/water.png'
+import physical from '../assets/typesIcons/physicalI.png'
+import status from '../assets/typesIcons/status.png'
+import special from '../assets/typesIcons/specialI.png'
 
-    let iconType = '';
-
-   export const selectTypeIcon = (type) => {
+   export const selectTypePokemonIcon = (type) => {
         switch (type) {
             case 'bug':
-                iconType = bug;
-                return iconType;
+                return bug;
             case 'dark':
-                iconType = dark;
-                return iconType;
+                return dark;
             case 'dragon':
-                iconType = dragon;
-                return iconType;
+                return dragon;
             case 'electric':
-                iconType = electric;
-                return iconType;
+                return electric;
             case 'fairy':
-                iconType = fairy;
-                return iconType;
+                return fairy;
             case 'fighting':
-                iconType = fighting;
-                return iconType;
+                return fighting;
             case 'fire':
-                iconType = fire;
-                return iconType;
+                return fire;
             case 'flying':
-                iconType = flying;
-                return iconType;
+                return flying;
             case 'ghost':
-                iconType = ghost;
-                return iconType;
+                return ghost;
             case 'grass':
-                iconType = grass;
-                return iconType;
+                return grass;
             case 'ground':
-                iconType = ground;
-                return iconType;
+                return ground;
             case 'ice':
-                iconType = ice;
-                return iconType;
+                return ice;
             case 'normal':
-                iconType = normal;
-                return iconType;
+                return normal;
             case 'psychic':
-                iconType = psychic;
-                return iconType;
+                return psychic;
             case 'poison':
-                iconType = poison;
-                return iconType;
+                return poison;
             case 'rock':
-                iconType = rock;
-                return iconType;
+                return rock;
             case 'steel':
-                iconType = steel;
-                return iconType;
+                return steel;
             case 'water':
-                iconType = water;
-                return iconType;    
+                return water;
+            case 'physical':
+                return physical;
+            case 'status':
+                return status;
+            case 'special':
+                return special;     
             default:
                 break;
         }

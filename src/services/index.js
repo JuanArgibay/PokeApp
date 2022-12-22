@@ -36,15 +36,6 @@ export const getPokemonIdMove = async (id) => {
     }
 }
 
-export const getPokemonUrlMove = async ({url}) => {
-    try {
-        const {data} = await axios.get (url)
-        return data;
-    } catch (error) {
-        return error;
-    }
-}
-
 export const getPokemonByName = async (keyword) => {
     try {
         const { data } = await axios.get(`http://pokeapi.co/api/v2/pokemon/${keyword}`)

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { getPokemonByName } from "../../services";
 import { Link } from "react-router-dom";
 
@@ -32,7 +32,7 @@ export const Searcher = () => {
             <label>Indtroduce el nombre de tu Pokemon</label>
             <input
                 type="text"
-                name="keywprd"
+                name="keyword"
                 onChange={(e) => setKeyword(e.target.value)}>
             </input>
 
