@@ -7,18 +7,18 @@ import { ImageType } from '../ImageType/ImageType'
 export const PokeCard = () => {
     const { id } = useParams();
     const { pokemon } = usePokemon(id)
-    const urlImage = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/";
-    
+    const urlGif = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/";
+    const urlImage = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
     return (
         pokemon ? (
             <div className='backgroundCard'>
                 <section className='poke-card-container'>
                     <article className='pokecardNameNumber'>
-                        <h1>{(pokemon.name).toUpperCase()}</h1>
+                        <h1>{(pokemon.name).toUpperCase().split("-").shift()}</h1>
                         <p>Nº{pokemon.id}</p>
                     </article>
                     <article className='pokecardImgType'>
-                        <Imagen url={urlImage + `/${pokemon.id}.gif`} />
+                        <Imagen url={pokemon.id <= 649? (urlGif + `/${pokemon.id}.gif`) : (urlImage + `/${pokemon.id}.png`)} />
                             <div>
                                 {pokemon.types.map((pokemonType, index) =>
                                     <ImageType 

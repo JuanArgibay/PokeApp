@@ -14,6 +14,8 @@
   background-image: url('./assets/fondoweb.png');
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -35,4 +37,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+footer {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0.8rem;
+  font-family: 'Roboto', sans-serif;
 }
